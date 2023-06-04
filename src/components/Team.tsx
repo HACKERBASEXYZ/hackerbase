@@ -29,14 +29,14 @@ const teamMembers: TeamMember[] = [
     name: "Samuel Oh",
     role: "CTO",
     image: "/samuel.jpeg",
-    linkedin: "https://www.linkedin.com/in/paul-henrykajfasz/",
-    twitter: "https://twitter.com/phklive",
+    linkedin: "https://www.linkedin.com/in/samueloh99/",
+    twitter: "https://twitter.com/samueloh99",
   },
   {
     name: "Danilo Kim",
     role: "Advisor",
     image: "/danilo.jpg",
-    linkedin: "https://www.linkedin.com/in/paul-henrykajfasz/",
+    linkedin: "https://www.linkedin.com/in/danilowhk2",
     twitter: "https://twitter.com/phklive",
   },
 ];

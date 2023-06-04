@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" id="root">
       <body
         className={`${fugaz.variable} ${playfair.variable} font-sans flex flex-col min-h-screen`}
       >

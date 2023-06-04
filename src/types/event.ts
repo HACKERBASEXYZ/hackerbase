@@ -25,9 +25,3 @@ export type Event = {
     ecosystem: string;
     theme: string;
 }
-
-export type Community = {
-    name: string;
-    icon: string;
-    link: string;
-}

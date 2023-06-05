@@ -11,8 +11,8 @@ export default function Home() {
       <Header />
       <FeaturedEvents />
       <Community />
-      <Partners />
       <Team />
+      <Partners />
       <Bottomer />
     </div>
   );

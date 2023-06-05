@@ -23,7 +23,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
   return (
     <Link href={link}>
       <div className="flex flex-col font-fugaz mb-4">
-        <div className="border border-primary hover:bg-card hover:cursor-pointer">
+        <div className="border border-primary hover:bg-slate-900 cursor-pointer">
           <div className="flex flex-row items-center justify-between p-2">
             <h1 className="text-xl text-center">{location}</h1>
             <h2 className="text-xl">{dates}</h2>

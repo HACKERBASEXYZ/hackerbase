@@ -25,20 +25,20 @@ const communities: Community[] = [
   {
     name: "Telegram",
     icon: BsTelegram,
-    link: "https://t.me/hackerbasexyz",
+    link: "https://t.me/+XCJJFE0kd_E1ZTVk",
     description: "Join our Telegram group",
-  },
-  {
-    name: "Discord",
-    icon: BsDiscord,
-    link: "https://t.me/hackerbasexyz",
-    description: "Join our Discord server",
   },
   {
     name: "Medium",
     icon: BsMedium,
-    link: "https://t.me/hackerbasexyz",
+    link: "/",
     description: "Read our Medium articles",
+  },
+  {
+    name: "Discord",
+    icon: BsDiscord,
+    link: "/",
+    description: "Join our Discord server",
   },
 ];
 

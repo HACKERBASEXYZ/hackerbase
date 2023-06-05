@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${fugaz.variable} ${playfair.variable} font-sans flex flex-col min-h-screen`}
       >
         <Navbar />
-        <div className="px-4 flex-grow">{children}</div>
+        <div className="px-4 md:px-10 flex-grow">{children}</div>
         <Footer />
       </body>
     </html>

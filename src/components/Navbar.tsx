@@ -1,15 +1,15 @@
 "use client";
 import Link from "next/link";
 import Logo from "./Logo";
-import { slide as Menu, ReactBurgerMenu } from "react-burger-menu";
 import { PopupButton } from "react-calendly";
 import { useEffect, useState } from "react";
-import BurgerMenu from "./BurgerMenu";
 import Image from "next/image";
+import { GiHamburgerMenu } from "react-icons/gi";
+import BurgerMenu from "./BurgerMenu";
 
 const Navbar = () => {
   const [ready, setReady] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     setReady(true);
@@ -25,6 +25,11 @@ const Navbar = () => {
         className="top-0 left-0 absolute -z-10"
       />
       <Logo />
+      <GiHamburgerMenu
+        className="md:hidden text-3xl cursor-pointer"
+        onClick={() => setIsOpen(true)}
+      />
+      <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className="md:flex-row items-center gap-4  hidden md:flex">
         <Link
           href={"/"}
@@ -46,22 +51,6 @@ const Navbar = () => {
             url="https://calendly.com/paulhenrykajfasz/hackerbase-event-consulting"
           />
         )}
-      </div>
-      <div className="md:hidden">
-        <BurgerMenu>
-          <Link
-            href={"/"}
-            className="font-fugaz text-xl hover:underline underline-offset-4 decoration-primary"
-          >
-            Home
-          </Link>
-          <Link
-            href={"/events"}
-            className="font-fugaz text-xl hover:underline underline-offset-4 decoration-primary"
-          >
-            Events
-          </Link>
-        </BurgerMenu>
       </div>
     </nav>
   );

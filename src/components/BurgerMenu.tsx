@@ -1,35 +1,55 @@
-import { slide as Menu } from "react-burger-menu";
+"use client";
+import Link from "next/link";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { PopupButton } from "react-calendly";
+import { RxCross1 } from "react-icons/rx";
 
 interface BurgerMenuProps {
-  children: React.ReactNode;
+  isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-const HamburgerMenu: React.FC<BurgerMenuProps> = ({ children }) => (
-  <div className="relative p-2">
-    <Menu
-      customBurgerIcon={<HamburgerIcon />}
-      width={"auto"}
-      className="top-0 left-0"
+const HamburgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, setIsOpen }) => {
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    setReady(true);
+  }, []);
+  return (
+    <div
+      className={`${
+        isOpen ? "flex flex-col" : "hidden"
+      } h-screen w-screen bg-black absolute top-0 left-0 z-10 gap-4 items-center justify-center`}
     >
-      {children}
-    </Menu>
-  </div>
-);
-
-const HamburgerIcon = () => (
-  <div className="p-1/2">
-    <svg
-      className="w-8 h-8 text-gray-500"
-      fill="none"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path d="M4 6h16M4 12h16M4 18h16"></path>
-    </svg>
-  </div>
-);
+      <RxCross1
+        className="text-3xl cursor-pointer top-4 right-4 absolute"
+        onClick={() => setIsOpen(false)}
+      />
+      <Link
+        href={"/"}
+        className="font-fugaz text-xl hover:underline underline-offset-4 decoration-primary"
+        onClick={() => setIsOpen(false)}
+      >
+        Home
+      </Link>
+      <Link
+        href={"/events"}
+        className="font-fugaz text-xl hover:underline underline-offset-4 decoration-primary"
+        onClick={() => setIsOpen(false)}
+      >
+        Events
+      </Link>
+      {ready && (
+        <div onClick={() => setIsOpen(false)}>
+          <PopupButton
+            className="px-4 py-2 border border-primary hover:bg-primary rounded-full font-fugaz "
+            text="CREATE YOUR OWN EVENT"
+            rootElement={document.getElementById("root") as HTMLElement}
+            url="https://calendly.com/paulhenrykajfasz/hackerbase-event-consulting"
+          />
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default HamburgerMenu;

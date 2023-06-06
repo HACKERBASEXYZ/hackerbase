@@ -3,7 +3,6 @@ import { IconType } from "react-icons";
 import {
   BsTwitter,
   BsTelegram,
-  BsDiscord,
   BsMedium,
   BsArrowUpRight,
 } from "react-icons/bs";
@@ -25,7 +24,7 @@ const communities: Community[] = [
   {
     name: "Telegram",
     icon: BsTelegram,
-    link: "https://t.me/+XCJJFE0kd_E1ZTVk",
+    link: "https://t.me/+jzWAmD8VWOo5Yzlk",
     description: "Join our Telegram group",
   },
   {

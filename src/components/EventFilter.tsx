@@ -8,7 +8,7 @@ interface EventFilterProps {
 
 const EventFilter: React.FC<EventFilterProps> = ({ filter, setFilter }) => {
   return (
-    <div className="flex flex-row items-center gap-8 font-fugaz text-xl lg:text-2xl mb-4 text-gray-500">
+    <div className="flex flex-row items-center gap-8 font-fugaz text-lg lg:text-2xl mb-4 text-gray-500">
       <button
         onClick={() => setFilter(null)}
         className={`${

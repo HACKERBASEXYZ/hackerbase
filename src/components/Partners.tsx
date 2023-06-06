@@ -22,7 +22,7 @@ const partners: Partner[] = [
 
 const Partners = () => {
   return (
-    <div className="my-10 flex flex-col">
+    <div className="my-10 flex flex-col items-center">
       <h1 className="text-2xl font-title text-center font-fugaz">
         OUR PARTNERS
       </h1>

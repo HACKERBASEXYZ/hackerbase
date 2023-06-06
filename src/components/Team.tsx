@@ -6,8 +6,8 @@ type TeamMember = {
   name: string;
   role: string;
   image: string;
-  linkedin: string;
-  twitter: string;
+  linkedin?: string;
+  twitter?: string;
 };
 
 const teamMembers: TeamMember[] = [
@@ -22,8 +22,7 @@ const teamMembers: TeamMember[] = [
     name: "Sun Bao",
     role: "Co-founder",
     image: "/sun.jpg",
-    linkedin: "https://www.linkedin.com/in/paul-henrykajfasz/",
-    twitter: "https://twitter.com/phklive",
+    twitter: "https://twitter.com/sunbh_eth",
   },
   {
     name: "Samuel Oh",
@@ -36,8 +35,7 @@ const teamMembers: TeamMember[] = [
     name: "Danilo Kim",
     role: "Advisor",
     image: "/danilo.jpg",
-    linkedin: "https://www.linkedin.com/in/danilowhk2",
-    twitter: "https://twitter.com/phklive",
+    twitter: "https://twitter.com/danilowhk2",
   },
 ];
 
@@ -68,12 +66,16 @@ const Team = () => {
               <h1 className="text-xl mt-2">{member.name}</h1>
               <h1>{member.role}</h1>
               <div className="my-4 flex flex-row items-center justify-center gap-4">
-                <Link href={member.linkedin}>
-                  <BsLinkedin className="self-center text-2xl hover:text-blue-600" />
-                </Link>
-                <Link href={member.twitter}>
-                  <BsTwitter className="self-center text-2xl hover:text-blue-200" />
-                </Link>
+                {member.linkedin && (
+                  <Link href={member.linkedin}>
+                    <BsLinkedin className="self-center text-2xl hover:text-blue-600" />
+                  </Link>
+                )}
+                {member.twitter && (
+                  <Link href={member.twitter}>
+                    <BsTwitter className="self-center text-2xl hover:text-blue-200" />
+                  </Link>
+                )}
               </div>
             </div>
           );

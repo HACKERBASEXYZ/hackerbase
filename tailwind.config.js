@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         fugaz: ['var(--font-fugaz)'],
         playfair: ['var(--font-playfair)'],
+        roboto: ['var(--font-roboto)'],
       },
       colors: {
         'primary': '#FF5C02',

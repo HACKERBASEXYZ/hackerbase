@@ -65,7 +65,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
           </div>
           <div className="p-4 h-52">
             <h1 className="text-2xl text-center my-1">{title}</h1>
-            <p className="font-sans">{description}</p>
+            <p className="font-roboto">{description}</p>
           </div>
         </div>
       </div>

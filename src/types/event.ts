@@ -9,7 +9,8 @@ export enum EventType {
     'CONFERENCE' = 'CONFERENCE',
     'MEETUP' = 'MEETUP',
     'PARTY' = 'PARTY',
-    'WORKSHOP' = 'WORKSHOP'
+    'WORKSHOP' = 'WORKSHOP',
+    'SPORTS' = 'SPORTS'
 }
 
 export type Event = {
@@ -24,4 +25,5 @@ export type Event = {
     capacity: number;
     ecosystem: string;
     theme: string;
+    description: string;
 }

@@ -19,6 +19,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
     status,
     theme,
     ecosystem,
+    description,
   } = event;
   return (
     <Link href={link}>
@@ -62,7 +63,10 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
               <h1 className="text-red-500">CLOSED</h1>
             )}
           </div>
-          <h1 className="text-2xl text-center my-1">{title}</h1>
+          <div className="p-4 h-52">
+            <h1 className="text-2xl text-center my-1">{title}</h1>
+            <p className="font-sans">{description}</p>
+          </div>
         </div>
       </div>
     </Link>

@@ -34,12 +34,6 @@ const communities: Community[] = [
     link: "/",
     description: "Read our Medium articles",
   },
-  {
-    name: "Discord",
-    icon: BsDiscord,
-    link: "/",
-    description: "Join our Discord server",
-  },
 ];
 
 const Community = () => {
@@ -52,7 +46,7 @@ const Community = () => {
         </span>{" "}
         community
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {communities.map((community) => {
           return (
             <Link

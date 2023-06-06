@@ -17,7 +17,11 @@ const nextConfig = {
           {
             protocol: 'https',
             hostname: 'uwaterloo.ca'
-          }
+          },
+          {
+            protocol: 'https',
+            hostname: 'www.racingfoot.fr'
+          },
         ],
       },
 }
